@@ -1,0 +1,48 @@
+/* Rating-Average-Stars-style */
+.rating-average {
+  font-size: 100px;
+  font-weight: bold;
+  font-family: system-ui;
+  margin-top: 1rem;
+}
+.rating-star-container {
+  display: flex;
+  margin-top: 1rem;
+}
+.rating-div {
+  font-size: 17px !important;
+}
+.rating-stars {
+  margin-top: -8px;
+  margin-left: 9px;
+}
+
+/* score bar style */
+.scorebars {
+  margin-top: 50px;
+}
+.scorebars-title {
+  font-family: "Shippori Mincho", serif;
+  font-size: 12px;
+}
+.rc-progress-line {
+  max-height: 0.5em;
+  min-height: 0.5em;
+  max-width: 15em;
+  min-width: none;
+}
+.bar-title {
+  max-width: 3em;
+  min-height: 0.5em;
+  margin-right: 10px;
+  text-decoration: underline;
+}
+
+.oneBar {
+  max-width: 15em;
+  min-width: 15em;
+}
+.progressBar {
+  display: flex !important;
+  margin-top: 10px;
+}
