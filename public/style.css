@@ -1,3 +1,13 @@
+/* Rating-Reviews */
+.rating-container {
+  margin-right: 50px;
+}
+.body {
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 50px;
+  display: flex;
+}
 /* Rating-Average-Stars-style */
 .rating-average {
   font-size: 100px;
@@ -17,7 +27,7 @@
   margin-left: 9px;
 }
 
-/* score bar style */
+/* Score bar style */
 .scorebars {
   margin-top: 50px;
 }
@@ -45,4 +55,76 @@
 .progressBar {
   display: flex !important;
   margin-top: 10px;
+}
+/* reviews */
+.top-review {
+  display: flex;
+  border-color: #0f1111;
+  color: #0f1111;
+  display: inline;
+  font-size: 16px;
+  font-weight: 900;
+}
+.reviews-tile {
+  margin-top: 50px;
+  display: block;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+.stars-user {
+  display: flex;
+}
+.user-name {
+  margin-left: 200px;
+}
+.summary {
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 1000;
+}
+.review-body {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.tile-container {
+  max-width: 38em;
+}
+.response-countainer {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.response {
+  font-weight: 1000;
+}
+.user-response {
+  margin-top: 10px;
+}
+.recommend-product {
+  margin-top: 10px;
+}
+.helpful-div {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 100;
+}
+.yes-ancer {
+  text-decoration: underline;
+
+  color: black;
+}
+.report-ancer {
+  text-decoration: underline;
+  color: black;
+}
+.yes-div {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  max-height: 15px;
+  min-height: 15px;
+}
+.helpul-number{
+  margin-right: 10px;
 }

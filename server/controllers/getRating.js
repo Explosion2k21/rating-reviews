@@ -26,9 +26,11 @@ module.exports = {
         }
       )
       .then(({ data }) => {
-        console.log(data);
         res.send(data);
       })
-      .catch((err) => res.send(err));
+      .catch((err) => {
+        console.log("lool", err);
+        res.send(err);
+      });
   },
 };
