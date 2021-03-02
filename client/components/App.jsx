@@ -1,9 +1,9 @@
 import React from "react";
 import RatingStar from "./Rating.jsx";
 import ScoreBar from "./ScoreBar.jsx";
-
+import Reviews from "./Reviews.jsx";
 const App = () => (
-  <div>
+  <div className="body">
     <div className="rating-container">
       <div>
         <RatingStar />
@@ -13,7 +13,7 @@ const App = () => (
       </div>
     </div>
     <div className="review-container">
-        
+      <Reviews />
     </div>
   </div>
 );

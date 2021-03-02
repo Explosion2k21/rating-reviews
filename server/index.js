@@ -11,6 +11,7 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "../public")));
 app.use("/rating", routerRating);
 app.use("/ratingBar", routerRatingBar);
+app.use("/reviews", routerRating);
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);

@@ -25,7 +25,6 @@ const ScoreBar = () => {
               const all = counter.reduce((a, b) => {
                 return a * 1 + 1 * b;
               }, 0);
-
               return (
                 <div className="progressBar" key={i}>
                   <div className="bar-title"> {i + 1} stars</div>

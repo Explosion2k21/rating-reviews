@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Rating from "@material-ui/lab/Rating";
 import getRatingAverage from "../actions/getRatingAverage.js";
 import axios from "axios";
-
 const RatingStar = () => {
   const state = useSelector((state) => state.getRatingAverage);
   const [ratingVal, setRating] = useState(0);
