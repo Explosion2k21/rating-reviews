@@ -66646,6 +66646,11 @@ var Reviews = function Reviews() {
       allReviews = _useState4[0],
       setallReviews = _useState4[1];
 
+  var _useState5 = (0, _react.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      Reviews = _useState6[0],
+      setReviews = _useState6[1];
+
   (0, _react.useEffect)(function () {
     _axios2.default.get("/reviews/" + count).then(function (_ref) {
       var data = _ref.data;
@@ -66656,11 +66661,21 @@ var Reviews = function Reviews() {
     }).catch(function (error) {
       return console.log(error);
     });
+  }, [count]);
+
+  (0, _react.useEffect)(function () {
+    _axios2.default.get("/reviews/").then(function (_ref2) {
+      var data = _ref2.data;
+
+      setReviews(data.results);
+    }).catch(function (error) {
+      return console.log(error);
+    });
   }, []);
   return _react2.default.createElement(
     "div",
     null,
-    allReviews.length !== 0 ? _react2.default.createElement(
+    Reviews.length !== 0 ? _react2.default.createElement(
       "div",
       { className: "tile-container" },
       _react2.default.createElement(
@@ -66669,7 +66684,7 @@ var Reviews = function Reviews() {
         _react2.default.createElement(
           "div",
           null,
-          allReviews.length,
+          Reviews.length,
           " reviews,sorted by",
           _react2.default.createElement(
             "span",
@@ -66762,8 +66777,28 @@ var Reviews = function Reviews() {
             )
           )
         );
-      })
-    ) : null
+      }).reverse()
+    ) : null,
+    _react2.default.createElement(
+      "div",
+      { className: "button-container" },
+      allReviews.length !== 0 ? _react2.default.createElement(
+        "button",
+        {
+          className: "more-reviews-button button",
+          onClick: function onClick() {
+            setcount(count + 2);
+          }
+        },
+        "MORE REVIEWS"
+      ) : null,
+      _react2.default.createElement(
+        "button",
+        { className: "add-reviews button" },
+        "ADD A REVIEW ",
+        _react2.default.createElement("i", { className: "fa fa-plus" })
+      )
+    )
   );
 };
 

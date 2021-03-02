@@ -125,6 +125,28 @@
   max-height: 15px;
   min-height: 15px;
 }
-.helpul-number{
+.helpul-number {
   margin-right: 10px;
+}
+/* button-container-part*/
+.button-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.more-reviews-button {
+  padding: 17px 17px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.add-reviews {
+  padding: 17px 30px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.fa {
+  margin-left: 15px;
+  font-weight: 200 !important;
+  font-size: 15px;
 }
