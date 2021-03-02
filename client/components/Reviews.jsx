@@ -2,23 +2,28 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Rating from "@material-ui/lab/Rating";
 import moment from "moment";
+import AddReviews from "./AddReviews.jsx";
 
 const Reviews = () => {
+  // declaring states and there methods for controlling them
   const [count, setcount] = useState(2);
   const [allReviews, setallReviews] = useState([]);
   const [Reviews, setReviews] = useState([]);
-
+  const [product, setproduct] = useState("");
+// use useEffect  to send request with count the that number from data
   useEffect(() => {
     axios
       .get(`/reviews/${count}`)
       .then(({ data }) => {
+        setallReviews(data.results);
+        setproduct(data.product);
         console.log("cccc====>", count);
         console.log("==>", data);
-        setallReviews(data.results);
+        console.log("produi -----------------------", data.product);
       })
       .catch((error) => console.log(error));
   }, [count]);
-
+// use useEffect to get all reviews
   useEffect(() => {
     axios
       .get(`/reviews/`)
@@ -97,9 +102,7 @@ const Reviews = () => {
             MORE REVIEWS
           </button>
         ) : null}
-        <button className="add-reviews button">
-          ADD A REVIEW <i className="fa fa-plus"></i>
-        </button>
+        <AddReviews product={product} />
       </div>
     </div>
   );

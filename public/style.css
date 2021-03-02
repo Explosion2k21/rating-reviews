@@ -150,3 +150,24 @@
   font-weight: 200 !important;
   font-size: 15px;
 }
+.close-model-review {
+  border-radius: 50%;
+  float: right;
+}
+.label-form {
+  margin-right: 10px;
+}
+/* .form-add-reviews {
+  display: block;
+} */
+.btn-submit {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+/* .recommendyorn {
+  display: flex;
+}
+.spanrecommend {
+  font-weight: 200;
+} */
