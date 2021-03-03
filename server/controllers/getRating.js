@@ -1,5 +1,6 @@
-const TOKEN = "8b3ad621b6925f7956675d57073d216fa9211aa4";
 const axios = require("axios");
+const TOKEN = "0202c8e5939a3852d42b88438303343df27d7feb";
+
 module.exports = {
   getRating: (req, res) => {
     axios

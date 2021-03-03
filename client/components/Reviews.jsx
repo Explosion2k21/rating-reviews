@@ -10,10 +10,10 @@ const Reviews = () => {
   const [allReviews, setallReviews] = useState([]);
   const [Reviews, setReviews] = useState([]);
   const [product, setproduct] = useState("");
-// use useEffect  to send request with count the that number from data
+  // use useEffect  to send request with count the that number from data
   useEffect(() => {
     axios
-      .get(`/reviews/${count}`)
+      .get(`http://localhost:3004/reviews/reviews/${count}`)
       .then(({ data }) => {
         setallReviews(data.results);
         setproduct(data.product);
@@ -23,10 +23,10 @@ const Reviews = () => {
       })
       .catch((error) => console.log(error));
   }, [count]);
-// use useEffect to get all reviews
+  // use useEffect to get all reviews
   useEffect(() => {
     axios
-      .get(`/reviews/`)
+      .get(`http://localhost:3004/reviews/reviews/`)
       .then(({ data }) => {
         setReviews(data.results);
       })
