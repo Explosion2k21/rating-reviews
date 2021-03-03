@@ -1,3 +1,4 @@
+const TOKEN = "8b3ad621b6925f7956675d57073d216fa9211aa4";
 const axios = require("axios");
 module.exports = {
   getRating: (req, res) => {
@@ -6,7 +7,7 @@ module.exports = {
         "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews?product_id=11048",
         {
           headers: {
-            Authorization: process.env.TOKEN,
+            Authorization: TOKEN,
           },
         }
       )
@@ -21,7 +22,7 @@ module.exports = {
         "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/meta?product_id=11048",
         {
           headers: {
-            Authorization: process.env.TOKEN,
+            Authorization: TOKEN,
           },
         }
       )

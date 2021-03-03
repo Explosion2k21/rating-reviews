@@ -6,7 +6,7 @@ const app = express();
 const { routerRating } = require("./routes/routerRating.js");
 const { routerRatingBar } = require("./routes/routerRatingBar.js");
 const { routerReviews } = require("./routes/routerReviews.js");
-const port = process.env.PORT;
+const port = process.env.PORT || 3004;
 
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "../public")));
