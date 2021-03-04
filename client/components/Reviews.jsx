@@ -13,7 +13,7 @@ const Reviews = () => {
   // use useEffect  to send request with count the that number from data
   useEffect(() => {
     axios
-      .get(`http://localhost:3004/reviews/reviews/${count}`)
+      .get(`http://46.101.100.159:3004/reviews/reviews/${count}`)
       .then(({ data }) => {
         setallReviews(data.results);
         setproduct(data.product);
@@ -26,7 +26,7 @@ const Reviews = () => {
   // use useEffect to get all reviews
   useEffect(() => {
     axios
-      .get(`http://localhost:3004/reviews/reviews/`)
+      .get(`http://46.101.100.159:3004/reviews/`)
       .then(({ data }) => {
         setReviews(data.results);
       })

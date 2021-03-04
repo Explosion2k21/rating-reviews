@@ -13,7 +13,7 @@ const RatingStar = () => {
   //useEffect to send request to get all the data to calculate the average of rating and render it to the stars rating
   useEffect(() => {
     axios
-      .get("http://localhost:3004/reviews/rating")
+      .get("http://46.101.100.159:3004/reviews/rating")
       .then(({ data }) => {
         let average = 0;
         for (let i = 0; i < data.results.length; i++) {

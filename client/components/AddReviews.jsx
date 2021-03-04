@@ -82,7 +82,7 @@ const AddReviews = ({ product }) => {
     userInput.product_id = product * 1;
     userInput.recommend = recommend;
     axios
-      .post("/reviews/reviews", userInput)
+      .post("http://46.101.100.159:3004/reviews/reviews", userInput)
       .then(() => {
         console.log("done");
       })
