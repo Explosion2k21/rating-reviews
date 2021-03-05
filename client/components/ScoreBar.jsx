@@ -10,7 +10,7 @@ const ScoreBar = () => {
   //request to get the data and render it in the use score bar
   useEffect(() => {
     axios
-      .get("http://46.101.100.159:3004/reviews/ratingBar")
+      .get("http://206.81.26.204:3004/reviews/ratingBar")
       .then(({ data }) => {
         setCount(Object.values(data.ratings));
       })

@@ -59297,7 +59297,7 @@ var RatingStar = function RatingStar() {
   var dispatch = (0, _reactRedux.useDispatch)();
   //useEffect to send request to get all the data to calculate the average of rating and render it to the stars rating
   (0, _react.useEffect)(function () {
-    _axios2.default.get("http://localhost:3004/reviews/rating").then(function (_ref) {
+    _axios2.default.get("http://206.81.26.204:3004/reviews/rating").then(function (_ref) {
       var data = _ref.data;
 
       var average = 0;
@@ -67968,7 +67968,7 @@ var ScoreBar = function ScoreBar() {
   var dispatch = (0, _reactRedux.useDispatch)();
   //request to get the data and render it in the use score bar
   (0, _react.useEffect)(function () {
-    _axios2.default.get("http://localhost:3004/reviews/ratingBar").then(function (_ref) {
+    _axios2.default.get("http://206.81.26.204:3004/reviews/ratingBar").then(function (_ref) {
       var data = _ref.data;
 
       setCount(Object.values(data.ratings));
@@ -68356,7 +68356,7 @@ var Reviews = function Reviews() {
 
 
   (0, _react.useEffect)(function () {
-    _axios2.default.get("http://localhost:3004/reviews/reviews/" + count).then(function (_ref) {
+    _axios2.default.get("http://206.81.26.204:3004/reviews/reviews/" + count).then(function (_ref) {
       var data = _ref.data;
 
       setallReviews(data.results);
@@ -68370,7 +68370,7 @@ var Reviews = function Reviews() {
   }, [count]);
   // use useEffect to get all reviews
   (0, _react.useEffect)(function () {
-    _axios2.default.get("http://localhost:3004/reviews/reviews/").then(function (_ref2) {
+    _axios2.default.get("http://206.81.26.204:3004/reviews/").then(function (_ref2) {
       var data = _ref2.data;
 
       setReviews(data.results);
@@ -68971,7 +68971,7 @@ var AddReviews = function AddReviews(_ref) {
     // userInput.review_id = uuid();
     userInput.product_id = product * 1;
     userInput.recommend = recommend;
-    _axios2.default.post("/reviews/reviews", userInput).then(function () {
+    _axios2.default.post("http://206.81.26.204:3004/reviews/reviews", userInput).then(function () {
       console.log("done");
     }).catch(function (err) {
       return console.log(err);
