@@ -1,6 +1,5 @@
 const axios = require("axios");
 const TOKEN =  process.env.TOKEN || "d730a5a7bf37cbef867777e0701d7f4d7171d2d3";
-
 module.exports = {
   getRating: (req, res) => {
     axios
