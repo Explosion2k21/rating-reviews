@@ -68361,9 +68361,6 @@ var Reviews = function Reviews() {
 
       setallReviews(data.results);
       setproduct(data.product);
-      console.log("cccc====>", count);
-      console.log("==>", data);
-      console.log("produi -----------------------", data.product);
     }).catch(function (error) {
       return console.log(error);
     });
