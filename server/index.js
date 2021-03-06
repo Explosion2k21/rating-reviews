@@ -4,12 +4,12 @@ const cors = require("cors");
 const morgan = require("morgan");
 const path = require("path");
 const app = express();
-const TOKEN =  process.env.TOKEN || "13dab64dc9d00c8dbefcc17995eb175185334b62";
+const TOKEN = process.env.TOKEN || "13dab64dc9d00c8dbefcc17995eb175185334b62";
 const port = process.env.PORT || 3004;
+const DEV_HOST = "localhost" || process.env.DEV_HOST;
 const { routerRating } = require("./routes/routerRating.js");
 const { routerRatingBar } = require("./routes/routerRatingBar.js");
 const { routerReviews } = require("./routes/routerReviews.js");
-
 
 app.use(cors());
 app.use(morgan("dev"));
@@ -19,5 +19,5 @@ app.use("/reviews/ratingBar", routerRatingBar);
 app.use("/reviews", routerReviews);
 
 app.listen(port, () => {
-  console.log(`server running at: http://${process.env.DEV_HOST}:${port}`);
+  console.log(`server running at: http://${DEV_HOST}:${port}`);
 });
