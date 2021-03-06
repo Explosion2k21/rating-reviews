@@ -1,5 +1,5 @@
 const axios = require("axios");
-const TOKEN =  process.env.TOKEN || "13dab64dc9d00c8dbefcc17995eb175185334b62";
+const TOKEN =  process.env.TOKEN || "22c9c42b980e7d2e44e8bc90b7852af8d96b1cad";
 
 module.exports = {
   getReviews: (req, res) => {

@@ -4,7 +4,6 @@ const cors = require("cors");
 const morgan = require("morgan");
 const path = require("path");
 const app = express();
-const TOKEN = process.env.TOKEN || "13dab64dc9d00c8dbefcc17995eb175185334b62";
 const port = process.env.PORT || 3004;
 
 const { routerRating } = require("./routes/routerRating.js");
