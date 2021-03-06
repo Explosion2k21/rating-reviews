@@ -17,9 +17,6 @@ const Reviews = () => {
       .then(({ data }) => {
         setallReviews(data.results);
         setproduct(data.product);
-        console.log("cccc====>", count);
-        console.log("==>", data);
-        console.log("produi -----------------------", data.product);
       })
       .catch((error) => console.log(error));
   }, [count]);
