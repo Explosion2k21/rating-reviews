@@ -202,6 +202,7 @@ const AddReviews = ({ product }) => {
               </div>
             </div>
           </div>
+          
           <button className="btn-submit" onClick={handleSubmit}>
             submit
           </button>

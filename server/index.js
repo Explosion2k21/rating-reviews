@@ -22,5 +22,5 @@ app.use("/reviews", routerReviews);
 
 
 app.listen(port, () => {
-  console.log(`server running at: http://${process.env.DEV_HOST}:${port}`);
+  console.log(`server running at: http://localhost:${port}`);
 });
