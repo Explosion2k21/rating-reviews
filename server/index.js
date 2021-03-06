@@ -18,6 +18,9 @@ app.use("/reviews/rating", routerRating);
 app.use("/reviews/ratingBar", routerRatingBar);
 app.use("/reviews", routerReviews);
 
+
+
+
 app.listen(port, () => {
   console.log(`server running at: http://${process.env.DEV_HOST}:${port}`);
 });
